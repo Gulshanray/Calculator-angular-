@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
- 
-    "build": "ng build",
+    "start": "cd backend/build && node server.js",
+    "prebuild":"cd backend && npm run build",
+    "build": "cd frontend && npm build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:dehradun": "node dist/dehradun/server/server.mjs"
